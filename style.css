@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    /* primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /* neutral */ 
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+
+    /*font-size*/
+    --fontSize: 13px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+div#container {
+    background-color: var(--Very-Light-Gray);
+}
+
+#heading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+}
+
+div.heading > h2:first-child, div.description > p:first-child {
+    font-weight: 200;
+}
+
+div.description > p:first-child {
+    color: var(--Grayish-Blue);
+    
+}
+
+main#cards>* {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-left: 1px hidden var(--Grayish-Blue);
+    border-right: 1px hidden var(--Grayish-Blue);
+    border-bottom: 1px hidden var(--Grayish-Blue);
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 0.1);
+    row-gap: 10px;
+      
+}
+
+.card > p {
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+    font-size: var(--fontSize);
+}
+
+.card > img {
+    align-self: flex-end;
+}
+
+#supervisor {
+    border-top: 5px solid var(--Cyan);
+}
+
+#team-builder {
+    border-top: 5px solid var(--Red);
+}
+
+#karma {
+    border-top: 5px solid var(--Orange);
+}
+
+#calculator {
+    border-top: 5px solid var(--Blue);
+}
+
+@media screen and (min-width: 375px) {
+    div#container {
+        padding: 80px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        row-gap: 70px;
+    }
+
+    main#cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 30px;
+
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #heading {
+        width: 500px;
+    }
+    
+    main#cards>* {
+        width: 350px;
+        height: 200px;  
+    }
+
+    main#cards {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        column-gap: 20px;
+    }
+
+    
+}
